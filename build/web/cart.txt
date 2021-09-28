@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/nouislider.css">
+<!-- Google fonts - Playfair Display-->
+<link rel="stylesheet" href="./css/css.css">
+<!-- owl carousel-->
+<link rel="stylesheet" href="./css/owl.carousel.css">
+<!-- Lightbox -->
+<link rel="stylesheet" href="./css/glightbox.min.css">
+<!-- theme stylesheet-->
+<link rel="stylesheet" href="./css/theme.css">
+<!-- Custom stylesheet - for your changes-->
+
+<link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+<!-- Favicon-->
+<script src="./js/angular.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" integrity="sha512-xnP2tOaCJnzp2d2IqKFcxuOiVCbuessxM6wuiolT9eeEJCyy0Vhcwa4zQvdrZNVqlqaxXhHqsSV1Ww7T2jSCUQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Font Awesome CSS-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css" integrity="sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/regular.css" integrity="sha384-avJt9MoJH2rB4PKRsJRHZv7yiFZn8LrnXuzvmZoD3fh1aL6aM6s0BBcnCvBe6XSD" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/brands.css" integrity="sha384-7xAnn7Zm3QC1jFjVc1A6v/toepoG3JXboQYzbM0jrPzou9OFXm/fY6Z/XiIebl/k" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG" crossorigin="anonymous">
+</head>
+<body>
+<!-- cart -->
+<div class="container d-flex justify-content-center align-items-center">
+<div class="cart-product-wrapper w-100">
+    
+    <!-- cart item-->
+    <div class="navbar-cart-product"> 
+      <div class="d-flex align-items-center"><a href=""><img class="img-fluid" style="width: 150px; height: 200px;"  src="./images/eigthproduct2.jpg" alt="..."></a>
+        <div class="w-100 p-4">
+         <h3>White Tee</h3>
+         <p class="lh-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quisquam rem numquam accusamus maxime pariatur quasi, sapiente maiores iste neque quis officiis sit aperiam asperiores architecto, distinctio fugiat eius repellendus.</p>
+         <h4 class="d-block text-muted">Quantity: 1 </h4>
+         <h4>$75.0</h4>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-cart-product">
+        <!-- total price-->
+        <div class="navbar-cart-total"><span class="text-uppercase text-muted">Total</span><strong class="text-uppercase">$75.00</strong></div>
+        <!-- buttons-->
+        <div class="d-flex justify-content-center"><a class="btn btn-outline-dark" href="checkout1.html">Checkout</a></div>
+      </div>
+  </div>
+  
+
+
+</div>
+
+
+    <script>
+        // ------------------------------------------------------- //
+        //   Inject SVG Sprite - 
+        //   see more here 
+        //   https://css-tricks.com/ajaxing-svg-sprite/
+        // ------------------------------------------------------ //
+        function injectSvgSprite(path) {
+        
+            var ajax = new XMLHttpRequest();
+            ajax.open("GET", path, true);
+            ajax.send();
+            ajax.onload = function(e) {
+            var div = document.createElement("div");
+            div.className = 'd-none';
+            div.innerHTML = ajax.responseText;
+            document.body.insertBefore(div, document.body.childNodes[0]);
+            }
+        }
+        // this is set to Bootstrapious website as you cannot 
+        // inject local SVG sprite (using only 'icons/orion-svg-sprite.a4dea202.svg' path)
+        // while using file:// protocol
+        // pls don't forget to change to your domain :)
+        injectSvgSprite('https://demo.bootstrapious.com/sell/1-2-0/icons/orion-svg-sprite.svg'); 
+        
+      </script>
+    <!-- jQuery-->
+    <script src="./js/jquery.min.js"></script>
+  <!-- Bootstrap JavaScript Bundle (Popper.js included)-->
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <!-- Owl Carousel-->
+  <script src="./js/owl.carousel.js"></script>
+  <script src="./js/owl.carousel2.thumbs.min.js"></script>
+  <!-- NoUI Slider (price slider)-->
+  <script src="./js/nouislider.min.js"></script>
+  <!-- Smooth scrolling-->
+  <script src="./js/smooth-scroll.polyfills.min.js"></script>
+  <!-- Lightbox gallery-->
+  <script src="./js/glightbox.min.js"> </script>
+  <!-- Object Fit Images - Fallback for browsers that don't support object-fit-->
+  <script src="./js/ofi.min.js"></script>
+  <script>var basePath = ''</script>
+  <script src="./js/jquery.zoom.min.js"></script>
+  <script src="./js/jquery.cookie.js"> </script>
+  <script src="./js/angular-route.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

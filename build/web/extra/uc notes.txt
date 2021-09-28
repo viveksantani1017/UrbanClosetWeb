@@ -1,0 +1,43 @@
+1. Admin
+2. Users
+3. Products
+4. Category
+
+
+5. Cart
+6. WishList OR Make a individual key columns in both table user and product
+
+
+
+
+		product name
+		des
+		image
+		price
+		colour
+		size
+		cate   man-shirts man-jeans men-accessories
+ woman-kids
+
+
+
+
+
+
+
+shirt id=56  man-shirt catid=1
+cate 
+man-shirt=1
+
+https://co-collections.com/
+https://mowellens.com/account/(login)
+			
+
+-----------------------------------------------------------------------------------------
+left-side navbar(logo category login about)
+name
+slider
+featured (new arrivals sliderśś)āāā				ś
+category boxes
+
+https://coolors.co/6e44ff-b892ff-ffc2e2-ff90b3-ef7a85

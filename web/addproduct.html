@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="./css/addproduct.css">
+        <title>Login</title>
+        <style>
+
+            @media screen and (max-width: 1024px)
+            {
+                img
+                {
+                    height: 350px;
+                    width: 350px;
+                    margin-left: -10px;
+                    margin-top: 80px;
+                } 
+                #login_title,#cb,#su,#btn_login,
+                .textbox
+                {
+                    margin-left: 500px;
+
+                }
+            }
+
+            @media screen and (max-width: 768px)
+            {
+                img
+                {
+                    height: 200px;
+                    width: 200px;
+                    margin-left: 150px;
+                    margin-top: -30px;
+                } 
+                #login_title
+                {
+                    margin-left: 100px;
+                    margin-top: 200px;
+                }
+                #cb,#su,#btn_login,
+                .textbox
+                {
+                    margin-left: 100px;
+
+                }
+                #btn_login
+                {
+                    margin-top: 30px;
+                }
+            }
+        </style>
+        <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript">
+            
+            function submitForm()
+            {
+                let formData = $('#form-login').serialize();
+                
+                $.ajax({
+                    url: './users',
+                    method: 'post',
+                    accepts: 'application/json;charset=utf8',
+                    data: formData,
+                    success: function (res)
+                    {
+                        
+                        if (res.status)
+                        {
+                           
+                            // stop progress
+                            window.location.href = './index.jsp';
+                            
+                        }
+                        else
+                        {
+                           window.location.href = './login.html';
+                            alert("wrong Username password!!");
+
+
+                        }
+                    }
+                });
+                
+                // start progress bar
+                
+                return false;
+            }
+            
+        </script>
+    </head>
+    <body>
+       
+        <h1 id="login_title" style="text-align: center;">Add Product</h1>
+        <form id="form-login" method="post" action="addproduct" enctype="multipart/form-data">
+            
+            <input type="text" class="textbox" placeholder="ProductName" name="ProductName">
+            <input type="text" class="textbox" placeholder="ProductDescription" name="ProductDescription">
+            <input type="text" class="textbox" placeholder="ProductPrice" name="ProductPrice">
+            <input type="text" class="textbox" placeholder="ProductSize" name="ProductSize">
+            <input type="text" class="textbox" placeholder="ProductColour" name="ProductColour">
+            <input type="text" class="textbox" placeholder="ProductQuantity" name="ProductQuantity">
+            <input type="file" name="image" id="file" multiple>
+            <br>
+            <button id="btn_login" type="submit">ADD</button>
+        </form>
+    </body>
+</html>
